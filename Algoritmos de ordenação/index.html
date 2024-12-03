@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="Algoritmos/binarySearch.js"></script>
+    <script src="Algoritmos/ternarySearch.js"></script>
+    <script src="Algoritmos/interpolationSearch.js"></script>
+    <script src="Algoritmos/JumpSearch.js"></script>
+    <script src="Algoritmos/exponentialSearch.js"></script>
+    <script src="Algoritmos/shellSort.js"></script>
+    <script src="Algoritmos/mergeSort.js"></script>
+    <script src="Algoritmos/selectionSort.js"></script>
+    <script src="Algoritmos/bucketSort.js"></script>
+    <script src="Algoritmos/radixSort.js"></script>
+    <script src="Algoritmos/quickSort.js"></script>
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f4f4f4;
+        }
+
+        caption {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Cheque o console</h1>
+    <table>
+        <caption>Performance Esperada dos Algoritmos de Busca</caption>
+        <thead>
+            <tr>
+                <th>Tamanho da Lista</th>
+                <th>Binary Search</th>
+                <th>Interpolation Search</th>
+                <th>Jump Search</th>
+                <th>Exponential Search</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pequena (100-)</td>
+                <td>Ótimo - Desempenho muito bom em listas pequenas ordenadas.</td>
+                <td>Bom - Bom desempenho se a lista for bem distribuída, mas o Binary Search é mais eficiente em listas
+                    pequenas.</td>
+                <td>Mediano - Funciona bem para listas pequenas, mas é mais lento que o Binary Search.</td>
+                <td>Bom - Eficiente para listas pequenas, mas perde para o Binary Search em termos de simplicidade.</td>
+            </tr>
+            <tr>
+                <td>Média (1.000)</td>
+                <td>Ótimo - Continua muito eficiente para listas ordenadas.</td>
+                <td>Bom - Pode ser mais eficiente que o Binary Search em listas uniformemente distribuídas.</td>
+                <td>Bom - Desempenho razoável, mas tende a ser mais lento que o Binary Search.</td>
+                <td>Ótimo - Funciona bem em listas de tamanho médio, com um crescimento exponencial interessante.</td>
+            </tr>
+            <tr>
+                <td>Grande (10.000+)</td>
+                <td>Excepcional - Desempenho praticamente constante, mantendo alta eficiência.</td>
+                <td>Mediano - A eficiência depende da distribuição dos dados; pode ser mais lento em listas grandes e
+                    não uniformemente distribuídas.</td>
+                <td>Mediano - Aumento nas comparações faz o Jump Search perder desempenho em listas grandes.</td>
+                <td>Excepcional - Excelente em listas grandes, especialmente quando a lista cresce exponencialmente.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table>
+        <caption>Desempenho Esperado de Algoritmos de Ordenação</caption>
+        <thead>
+            <tr>
+                <th>Tamanho da Lista</th>
+                <th>Shell Sort</th>
+                <th>Merge Sort</th>
+                <th>Selection Sort</th>
+                <th>Quick Sort</th>
+                <th>Bucket Sort</th>
+                <th>Radix Sort</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Pequena (100)</td>
+                <td>Bom - \(O(n^{3/2})\), eficiente para listas pequenas.</td>
+                <td>Muito Bom - \(O(n \log n)\), eficiente mesmo em listas pequenas.</td>
+                <td>Moderado - \(O(n^2)\), eficiente apenas para listas muito pequenas.</td>
+                <td>Ótimo - \(O(n \log n)\), muito eficiente mesmo para listas pequenas.</td>
+                <td>Bom - \(O(n + k)\), eficiente para dados uniformemente distribuídos.</td>
+                <td>Ótimo - \(O(nk)\), excelente quando os números são pequenos e o valor de \(k\) é baixo.</td>
+            </tr>
+            <tr>
+                <td>Média (1.000)</td>
+                <td>Moderado - \(O(n^{3/2})\), mais lento em listas médias.</td>
+                <td>Excepcional - \(O(n \log n)\), ótimo para listas médias.</td>
+                <td>Lento - \(O(n^2)\), muito ineficiente em listas médias.</td>
+                <td>Ótimo - \(O(n \log n)\), excelente para listas médias.</td>
+                <td>Moderado - \(O(n + k)\), eficiente em listas médias com dados uniformemente distribuídos.</td>
+                <td>Ótimo - \(O(nk)\), eficiente para dados inteiros pequenos e \(k\) baixo.</td>
+            </tr>
+            <tr>
+                <td>Grande (10.000)</td>
+                <td>Lento - \(O(n^{3/2})\), muito lento para listas grandes.</td>
+                <td>Excepcional - \(O(n \log n)\), continua muito eficiente em listas grandes.</td>
+                <td>Muito Lento - \(O(n^2)\), completamente ineficiente para listas grandes.</td>
+                <td>Excepcional - \(O(n \log n)\), mantém ótima performance em listas grandes.</td>
+                <td>Moderado - \(O(n + k)\), começa a perder desempenho em listas muito grandes.</td>
+                <td>Ótimo - \(O(nk)\), muito eficiente quando os números são pequenos e \(k\) baixo.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
